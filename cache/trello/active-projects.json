@@ -1,0 +1,21 @@
+{
+  "description": "Boards and lists to include in daily planning. Only Todo and In Progress lists.",
+  "boards": [
+    {
+      "id": "6888ebe716e5397291f6a070",
+      "name": "Giggle Fiber - UX Audit & Quick Wins",
+      "lists": {
+        "todo": "68b0ad92b16d8b1ecee3125e",
+        "in_progress": "68b0ad89995f201359bc737f"
+      }
+    },
+    {
+      "id": "67e6c195fa6957f36f1becc6",
+      "name": "DAM - Retainer",
+      "lists": {
+        "todo": "67e6c195fa6957f36f1becc1",
+        "in_progress": "67e6c195fa6957f36f1becc3"
+      }
+    }
+  ]
+}

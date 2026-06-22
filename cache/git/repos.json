@@ -1,0 +1,186 @@
+{
+  "description": "Git repositories to include in weekly reviews.",
+  "updated": "2026-06-19",
+  "repos": [
+    {
+      "path": "/Users/kylelangford/aem-local/dh-com-shared",
+      "name": "dh-com-shared",
+      "category": "aem"
+    },
+    {
+      "path": "/Users/kylelangford/aem-local/institutionals--north-america",
+      "name": "institutionals--north-america",
+      "category": "aem"
+    },
+    {
+      "path": "/Users/kylelangford/aem-local/zipcodes",
+      "name": "zipcodes",
+      "category": "aem"
+    },
+    {
+      "path": "/Users/kylelangford/aem-local/dh-com-reactor",
+      "name": "dh-com-reactor",
+      "category": "aem"
+    },
+    {
+      "path": "/Users/kylelangford/pantheon-local/dartmouthalumnimagazine",
+      "name": "dartmouthalumnimagazine",
+      "category": "pantheon"
+    },
+    {
+      "path": "/Users/kylelangford/pantheon-local/pennstatermag",
+      "name": "pennstatermag",
+      "category": "pantheon"
+    },
+    {
+      "path": "/Users/kylelangford/wpengine/gigglefiber-lando",
+      "name": "gigglefiber-lando",
+      "category": "wpengine"
+    },
+    {
+      "path": "/Users/kylelangford/wpengine/vicinity-lando",
+      "name": "vicinity-lando",
+      "category": "wpengine"
+    },
+    {
+      "path": "/Users/kylelangford/wpengine/reflexmd",
+      "name": "reflexmd",
+      "category": "wpengine"
+    },
+    {
+      "path": "/Users/kylelangford/wpengine/sumersports",
+      "name": "sumersports",
+      "category": "wpengine"
+    },
+    {
+      "path": "/Users/kylelangford/wpengine/vicinityenergy",
+      "name": "vicinityenergy",
+      "category": "wpengine"
+    },
+    {
+      "path": "/Users/kylelangford/wpengine/gigglefiber",
+      "name": "gigglefiber",
+      "category": "wpengine"
+    },
+    {
+      "path": "/Users/kylelangford/shopify/brunello-design-to-shopify",
+      "name": "brunello-design-to-shopify",
+      "category": "shopify"
+    },
+    {
+      "path": "/Users/kylelangford/shopify/esco-optics-2025",
+      "name": "esco-optics-2025",
+      "category": "shopify"
+    },
+    {
+      "path": "/Users/kylelangford/shopify/esco-optics-2019",
+      "name": "esco-optics-2019",
+      "category": "shopify"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/vercel-agent",
+      "name": "vercel-agent",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/finance-graphs",
+      "name": "finance-graphs",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/cottonball-astro",
+      "name": "cottonball-astro",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/kylelangford.com",
+      "name": "kylelangford.com",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/swordofdanklin.com",
+      "name": "swordofdanklin.com",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/holo-qr.com",
+      "name": "holo-qr.com",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/dr-calculator-vue",
+      "name": "dr-calculator-vue",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/precisionfrontend.com",
+      "name": "precisionfrontend.com",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/linkpad.com",
+      "name": "linkpad.com",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/coco-generator",
+      "name": "coco-generator",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/vercel/swordofdanklin-astro",
+      "name": "swordofdanklin-astro",
+      "category": "vercel"
+    },
+    {
+      "path": "/Users/kylelangford/www/gray-assoc",
+      "name": "gray-assoc",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/brunello-cta-manager",
+      "name": "brunello-cta-manager",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/hle",
+      "name": "hle",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/eforall-cta",
+      "name": "eforall-cta",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/hle-2",
+      "name": "hle-2",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/brunello.com",
+      "name": "brunello.com",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/claude-codex-workflow",
+      "name": "claude-codex-workflow",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/npq-webinars",
+      "name": "npq-webinars",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/brunello-personalization-engine",
+      "name": "brunello-personalization-engine",
+      "category": "www"
+    },
+    {
+      "path": "/Users/kylelangford/www/columbia-giving",
+      "name": "columbia-giving",
+      "category": "www"
+    }
+  ]
+}

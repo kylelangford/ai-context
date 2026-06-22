@@ -1,0 +1,5 @@
+# Example: Daily backup reminder
+# Schedule: Daily at 9am on weekdays
+# Status: inactive
+
+0 9 * * 1-5 /usr/bin/osascript -e 'display notification "Time to backup!" with title "Reminder"'
