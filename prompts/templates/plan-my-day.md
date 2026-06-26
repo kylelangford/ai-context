@@ -13,7 +13,7 @@ When triggered, create a prioritized daily plan:
 - Get Trello cards assigned to me, then **filter to only Todo and In Progress lists** from active projects
 - **Only include cards modified within the last 30 days** (check `dateLastActivity`)
 - **Group cards by project** if more than 5 cards per board (don't list each individually)
-- Get my Basecamp todos
+- Get my Basecamp todos (use `list_my_todos` with `user_id: "9186031"`)
 - Check today's date and day of week
 - Read git repos list: `~/ai-context/cache/git/repos.json`
 - Check for uncommitted work: `git status --short` on each repo
@@ -35,29 +35,13 @@ When triggered, create a prioritized daily plan:
 ```
 ## Plan for [DAY, DATE]
 
-### Morning Block (Focus Work)
-1. [ ] [Most important task] - [est. time]
-2. [ ] [Second priority] - [est. time]
-
-### Midday Block
-3. [ ] [Task] - [est. time]
-4. [ ] [Task] - [est. time]
-
-### Afternoon Block
-5. [ ] [Task] - [est. time]
-6. [ ] [Quick wins / admin]
-
-### If Time Permits
-- [Lower priority items]
-
-### Meetings / Fixed Commitments
-- [Any known meetings]
+### Ongoing
+1. [ ] [Most important task] - [project]
+2. [ ] [Second priority] - [project]
+3. [ ] [Third priority] - [project]
 
 ### Uncommitted Work
 - [repo]: [files changed]
-
-### Today's Goal
-[One sentence: what does success look like today?]
 ```
 
 ### 5. Ask User
@@ -73,6 +57,5 @@ After user confirms the plan, email it:
 - Use Resend MCP tool (from: claude@kylelangford.com)
 
 ## Notes
-- Keep to 4-6 main tasks (realistic)
-- Group similar tasks
-- Leave buffer time
+- Keep to 3 main focuses (realistic)
+- Prioritize client work (Basecamp) over internal (Trello)

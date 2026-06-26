@@ -13,11 +13,11 @@ When triggered, analyze the past week:
 - Get Trello recent activity, **filter to only active project boards**
 - **Only include cards modified within the last 30 days** (check `dateLastActivity`)
 - **Group cards by project** if more than 5 cards per board (don't list each individually)
-- Get Basecamp time report for this week (use `get_time_report` with `get_week_dates`)
+- Get Basecamp time report for this week (use `get_time_report` with `get_week_dates` and `user_id: 9186031`)
 - Check completed vs remaining tasks
 - **Basecamp todos take priority over Trello cards** (Basecamp = client work, Trello = internal tracking)
 - Read git repos list: `~/ai-context/cache/git/repos.json`
-- For each repo, get commits from this week: `git log --since="[week_start]" --until="[week_end]" --author="[user]" --oneline`
+- For each repo, get commits from this week: `git log --since="[week_start]" --until="[week_end]" --author="kyle" --oneline`
 
 ### 2. Use Cached Data for Lookups
 - Active projects/lists: `~/ai-context/cache/trello/active-projects.json`

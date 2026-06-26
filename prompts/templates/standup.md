@@ -13,47 +13,32 @@ When triggered, gather and summarize:
 - Get Trello cards assigned to me, **filter to only Todo and In Progress lists** from active projects
 - **Only include cards modified within the last 30 days** (check `dateLastActivity`)
 - **Group cards by project** if more than 5 cards per board (don't list each individually)
-- Get my Basecamp todos (use `list_my_todos`)
+- Get my Basecamp todos (use `list_my_todos` with `user_id: "9186031"`)
 - **Basecamp todos take priority over Trello cards** (Basecamp = client work, Trello = internal tracking)
 - Read git repos list: `~/ai-context/cache/git/repos.json`
-- Get yesterday's commits: `git log --since="yesterday" --until="today" --author="[user]" --oneline`
+- Get yesterday's commits: `git log --since="yesterday" --until="today" --author="kyle" --oneline`
 
 ### 2. Use Cached Data for Lookups
 - Active projects/lists: `~/ai-context/cache/trello/active-projects.json`
 - Project names: `~/ai-context/cache/basecamp/projects.json`
 - Git repos: `~/ai-context/cache/git/repos.json`
 
-### 3. Check Dates
-- Flag overdue items (due date < today)
-- Flag items due today
-- Note items due this week
-
-### 4. Output Format
+### 3. Output Format
 
 ```
 ## Daily Standup - [DATE]
 
-### Today's Focus
-1. [Top priority - due soonest or most important]
-2. [Second priority]
-3. [Third priority]
+### Basecamp Todos
+- [ ] [Todo name] - [project name]
 
-### In Progress
-- [ ] [Card/todo name] - [board/project] - due [date]
-
-### Overdue / Blocked
-- [Any overdue items or blockers]
+### In Progress (Trello)
+- [ ] [Card name] - [board/project] - due [date]
 
 ### Yesterday's Commits
 - [repo]: [commit summary]
-
-### Quick Stats
-- Active cards: [n]
-- Due today: [n]
-- Due this week: [n]
 ```
 
-### 5. Email Report
+### 4. Email Report
 After displaying the standup, email it:
 - To: `kyle.langford@brunelloinc.com`
 - Subject: `Daily Standup - [DATE]`

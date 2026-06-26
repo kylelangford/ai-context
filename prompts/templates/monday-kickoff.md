@@ -13,12 +13,12 @@ When triggered, plan the week ahead:
 - Get Trello cards assigned to me, **filter to only Todo and In Progress lists** from active projects
 - **Only include cards modified within the last 30 days** (check `dateLastActivity`)
 - **Group cards by project** if more than 5 cards per board (don't list each individually)
-- Get my Basecamp todos
-- **Get last week's Basecamp time report** (use `get_time_report` with previous week's dates)
+- Get my Basecamp todos (use `list_my_todos` with `user_id: "9186031"`)
+- **Get last week's Basecamp time report** (use `get_time_report` with previous week's dates and `user_id: 9186031`)
 - Read last week's review if exists (`~/ai-context/reports/weekly-review-*.md`)
 - **Basecamp todos take priority over Trello cards** (Basecamp = client work, Trello = internal tracking)
 - Read git repos list: `~/ai-context/cache/git/repos.json`
-- Get last week's commits: `git log --since="1 week ago" --author="[user]" --oneline`
+- Get last week's commits: `git log --since="1 week ago" --author="kyle" --oneline`
 
 ### 2. Use Cached Data for Lookups
 - Active projects/lists: `~/ai-context/cache/trello/active-projects.json`
