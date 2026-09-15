@@ -1,0 +1,16 @@
+{
+  "description": "Maps Basecamp project IDs to client names (for projects with generic names like 'Retainer')",
+  "mapping": {
+    "15363321": "Dartmouth",
+    "15349155": "Giggle Fiber",
+    "15388247": "Dartmouth",
+    "15351100": "CSMi",
+    "15411334": "All Points Broadband",
+    "15352355": "EforAll",
+    "15372837": null,
+    "15033003": null,
+    "12889121": "Enel NA",
+    "14706428": "Vicinity Energy",
+    "14646689": "Columbia University"
+  }
+}

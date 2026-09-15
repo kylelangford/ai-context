@@ -21,6 +21,7 @@ When triggered, create a prioritized daily plan:
 ### 2. Use Cached Data for Lookups
 - Board names: `~/ai-context/cache/trello/boards.json`
 - Project names: `~/ai-context/cache/basecamp/projects.json`
+- **Client mapping**: `~/ai-context/cache/basecamp/client-mapping.json` (use this to get client names for generic "Retainer" projects)
 - Git repos: `~/ai-context/cache/git/repos.json`
 
 ### 3. Prioritize Using
@@ -32,16 +33,15 @@ When triggered, create a prioritized daily plan:
 
 ### 4. Output Format
 
+Write 2-3 natural sentences covering:
+- What you're focused on (projects/tasks)
+- What you expect to accomplish today
+- Timing if relevant (when something should be ready)
+- Blockers if any exist
+
+Example:
 ```
-## Plan for [DAY, DATE]
-
-### Ongoing
-1. [ ] [Most important task] - [project]
-2. [ ] [Second priority] - [project]
-3. [ ] [Third priority] - [project]
-
-### Uncommitted Work
-- [repo]: [files changed]
+Today I'm focused on the Enel updates and Drupal upgrade prep. I expect to get the Enel changes into QA and make progress on the upgrade checklist. No blockers right now.
 ```
 
 ### 5. Ask User

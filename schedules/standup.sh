@@ -1,6 +1,6 @@
 #!/bin/bash
-# Weekly Review - runs at 9am every Friday
-# Cron: 0 9 * * 5 ~/ai-context/schedules/weekly-review.sh
+# Daily Standup - runs at 6am every weekday
+# Cron: 0 6 * * 1-5 ~/ai-context/schedules/standup.sh
 
 set -e
 
@@ -10,9 +10,9 @@ export NVM_DIR="$HOME/.nvm"
 
 cd /Users/kylelangford/ai-context
 
-LOG_FILE="$HOME/ai-context/logs/weekly-review-$(date +%Y%m%d).log"
+LOG_FILE="$HOME/ai-context/logs/standup-$(date +%Y%m%d).log"
 
-echo "=== Weekly Review - $(date) ===" >> "$LOG_FILE"
+echo "=== Daily Standup - $(date) ===" >> "$LOG_FILE"
 
 # Read-only tools only (no Edit, Write, or destructive MCP operations)
 ALLOWED_TOOLS="Read,Glob,Bash"
@@ -24,7 +24,7 @@ ALLOWED_TOOLS+=",mcp__basecamp__get_project_todos,mcp__basecamp__get_time_report
 ALLOWED_TOOLS+=",mcp__basecamp__get_today,mcp__basecamp__get_week_dates"
 ALLOWED_TOOLS+=",mcp__resend__send_email"
 
-/usr/local/bin/claude -p "weekly review" \
+/usr/local/bin/claude -p "standup" \
   --dangerously-skip-permissions \
   --allowedTools "$ALLOWED_TOOLS" \
   2>&1 | tee -a "$LOG_FILE"

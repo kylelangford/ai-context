@@ -4,6 +4,10 @@
 
 set -e
 
+# Load nvm for cron environment
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 cd /Users/kylelangford/ai-context
 
 LOG_FILE="$HOME/ai-context/logs/monday-kickoff-$(date +%Y%m%d).log"

@@ -1,0 +1,9 @@
+# Secrets
+.mcp.json
+
+# Generated content
+logs/
+reports/
+
+# macOS
+.DS_Store

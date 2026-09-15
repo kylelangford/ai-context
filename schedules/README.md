@@ -28,6 +28,8 @@ Store cron job definitions here. Ask Claude to install them to your crontab.
 
 | Script | Schedule | Description |
 |--------|----------|-------------|
+| `standup.sh` | `0 6 * * 1-5` | Weekdays 6am - Daily standup |
+| `plan-my-day.sh` | `30 6 * * 1-5` | Weekdays 6:30am - Daily planning |
 | `monday-kickoff.sh` | `0 9 * * 1` | Monday 9am - Week planning |
 | `weekly-review.sh` | `0 9 * * 5` | Friday 9am - Week summary |
 
@@ -83,6 +85,8 @@ launchctl start com.kylelangford.weekly-review
 ## Logs
 
 Logs are saved to `~/ai-context/logs/`:
+- `standup-YYYYMMDD.log`
+- `plan-my-day-YYYYMMDD.log`
 - `monday-kickoff-YYYYMMDD.log`
 - `weekly-review-YYYYMMDD.log`
 

@@ -22,6 +22,7 @@ When triggered, analyze the past week:
 ### 2. Use Cached Data for Lookups
 - Active projects/lists: `~/ai-context/cache/trello/active-projects.json`
 - Project names: `~/ai-context/cache/basecamp/projects.json`
+- **Client mapping**: `~/ai-context/cache/basecamp/client-mapping.json` (use for generic "Retainer" projects)
 - Git repos: `~/ai-context/cache/git/repos.json`
 
 ### 3. Analyze
