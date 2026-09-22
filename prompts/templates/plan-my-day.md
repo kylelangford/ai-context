@@ -44,13 +44,8 @@ Example:
 Today I'm focused on the Enel updates and Drupal upgrade prep. I expect to get the Enel changes into QA and make progress on the upgrade checklist. No blockers right now.
 ```
 
-### 5. Ask User
-After generating plan, ask:
-- "Does this order work? Any meetings or constraints I should know about?"
-- Adjust based on feedback
-
-### 6. Email Report
-After user confirms the plan, email it:
+### 5. Email Report
+After generating the plan, email it:
 - To: `kyle.langford@brunelloinc.com`
 - Subject: `Daily Plan - [DATE]`
 - Format as HTML for better readability

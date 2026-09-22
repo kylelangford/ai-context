@@ -1,6 +1,6 @@
 #!/bin/bash
-# Plan My Day - runs at 6:30am every weekday
-# Cron: 30 6 * * 1-5 ~/ai-context/schedules/plan-my-day.sh
+# Plan My Day - runs at 9am every weekday
+# Cron: 0 9 * * 1-5 ~/ai-context/schedules/plan-my-day.sh
 
 set -e
 
