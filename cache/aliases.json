@@ -1,0 +1,101 @@
+{
+  "description": "Project aliases for quick reference. Use shorthand in commands like 'show DAM tasks'",
+  "aliases": {
+    "DAM": {
+      "name": "Dartmouth Alumni Magazine",
+      "trello": {
+        "boardId": "67e6c195fa6957f36f1becc6",
+        "boardName": "DAM - Retainer"
+      },
+      "basecamp": {
+        "projectId": "15363321",
+        "projectName": "Monthly Retainer"
+      }
+    },
+    "Columbia": {
+      "name": "Columbia University",
+      "trello": {
+        "boardId": "63da83fba2f9c676e8bc2fce",
+        "boardName": "Columbia University"
+      },
+      "basecamp": {
+        "projectId": "14646689",
+        "projectName": "Columbia Magazine"
+      }
+    },
+    "Enel": {
+      "name": "Enel NA",
+      "trello": {
+        "boardId": "616cc2d5656b5b5b0ae0d12c",
+        "boardName": "Enel X"
+      },
+      "basecamp": {
+        "projectId": "12889121",
+        "projectName": "Retainer"
+      }
+    },
+    "Vicinity": {
+      "name": "Vicinity Energy",
+      "trello": {
+        "boardId": "5f4e9fd85b65354bff2c94ff",
+        "boardName": "Vicinity Energy - Website"
+      },
+      "basecamp": {
+        "projectId": "14706428",
+        "projectName": "Support Retainer"
+      }
+    },
+    "EforAll": {
+      "name": "EforAll",
+      "trello": {
+        "boardId": "67e304f1739775de88aa1fbb",
+        "boardName": "EforAll"
+      },
+      "basecamp": {
+        "projectId": "15352355",
+        "projectName": "Retainer"
+      }
+    },
+    "Giggle": {
+      "name": "Giggle Fiber",
+      "trello": {
+        "boardId": "6888ebe716e5397291f6a070",
+        "boardName": "Giggle Fiber - UX Audit & Quick Wins"
+      },
+      "basecamp": {
+        "projectId": "15349155",
+        "projectName": "Retainer"
+      }
+    },
+    "Gray": {
+      "name": "Gray Associates",
+      "trello": {
+        "boardId": "628e60040e9344629c20f2f4",
+        "boardName": "Gray Associates"
+      },
+      "basecamp": null
+    },
+    "CSMi": {
+      "name": "CSMi",
+      "trello": {
+        "boardId": "68e665756e1cc7093a8bd35d",
+        "boardName": "CSMi - Tactical Marketing Support"
+      },
+      "basecamp": {
+        "projectId": "15351100",
+        "projectName": "Tactical Marketing Support"
+      }
+    },
+    "Penn": {
+      "name": "Penn Stater",
+      "trello": {
+        "boardId": "60637b0f22ae052aa222bec4",
+        "boardName": "Pennstater"
+      },
+      "basecamp": {
+        "projectId": "14706959",
+        "projectName": "Penn Stater Website"
+      }
+    }
+  }
+}

@@ -23,6 +23,7 @@ When triggered, analyze the past week:
 - Active projects/lists: `~/ai-context/cache/trello/active-projects.json`
 - Project names: `~/ai-context/cache/basecamp/projects.json`
 - **Client mapping**: `~/ai-context/cache/basecamp/client-mapping.json` (use for generic "Retainer" projects)
+- **Aliases**: `~/ai-context/cache/aliases.json` - **always use the alias (short name) when displaying project names** (e.g., "DAM" instead of "Dartmouth Alumni Magazine")
 - Git repos: `~/ai-context/cache/git/repos.json`
 
 ### 3. Analyze
@@ -68,5 +69,5 @@ Total: [X] hours
 After displaying the review, email it:
 - To: `kyle.langford@brunelloinc.com`
 - Subject: `Weekly Review - Week of [DATE]`
-- Format as HTML for better readability
+- Use HTML template: `~/ai-context/templates/weekly-review.html`
 - Use Resend MCP tool (from: claude@kylelangford.com)

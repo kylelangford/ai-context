@@ -15,7 +15,6 @@ When triggered, plan the week ahead:
 - **Group cards by project** if more than 5 cards per board (don't list each individually)
 - Get my Basecamp todos (use `list_my_todos` with `user_id: "9186031"`)
 - **Get last week's Basecamp time report** (use `get_time_report` with previous week's dates and `user_id: 9186031`)
-- Read last week's review if exists (`~/ai-context/reports/weekly-review-*.md`)
 - **Basecamp todos take priority over Trello cards** (Basecamp = client work, Trello = internal tracking)
 - Read git repos list: `~/ai-context/cache/git/repos.json`
 - Get last week's commits: `git log --since="1 week ago" --author="kyle" --oneline`
@@ -24,6 +23,7 @@ When triggered, plan the week ahead:
 - Active projects/lists: `~/ai-context/cache/trello/active-projects.json`
 - Project names: `~/ai-context/cache/basecamp/projects.json`
 - **Client mapping**: `~/ai-context/cache/basecamp/client-mapping.json` (use for generic "Retainer" projects)
+- **Aliases**: `~/ai-context/cache/aliases.json` - **always use the alias (short name) when displaying project names** (e.g., "DAM" instead of "Dartmouth Alumni Magazine")
 - Git repos: `~/ai-context/cache/git/repos.json`
 
 ### 3. Analyze & Prioritize
@@ -74,5 +74,5 @@ Expected hours this week: [estimate based on tasks]
 After displaying the kickoff, email it:
 - To: `kyle.langford@brunelloinc.com`
 - Subject: `Monday Kickoff - Week of [DATE]`
-- Format as HTML for better readability
+- Use HTML template: `~/ai-context/templates/monday-kickoff.html`
 - Use Resend MCP tool (from: claude@kylelangford.com)

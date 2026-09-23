@@ -22,6 +22,7 @@ When triggered, create a prioritized daily plan:
 - Board names: `~/ai-context/cache/trello/boards.json`
 - Project names: `~/ai-context/cache/basecamp/projects.json`
 - **Client mapping**: `~/ai-context/cache/basecamp/client-mapping.json` (use this to get client names for generic "Retainer" projects)
+- **Aliases**: `~/ai-context/cache/aliases.json` - **always use the alias (short name) when displaying project names** (e.g., "DAM" instead of "Dartmouth Alumni Magazine")
 - Git repos: `~/ai-context/cache/git/repos.json`
 
 ### 3. Prioritize Using
@@ -48,7 +49,7 @@ Today I'm focused on the Enel updates and Drupal upgrade prep. I expect to get t
 After generating the plan, email it:
 - To: `kyle.langford@brunelloinc.com`
 - Subject: `Daily Plan - [DATE]`
-- Format as HTML for better readability
+- Use HTML template: `~/ai-context/templates/daily-plan.html`
 - Use Resend MCP tool (from: claude@kylelangford.com)
 
 ## Notes
