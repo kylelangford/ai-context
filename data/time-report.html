@@ -396,6 +396,12 @@
                     <canvas id="techTrendChart"></canvas>
                 </div>
             </div>
+            <div class="card">
+                <h3>Work Type Trends by Year</h3>
+                <div class="chart-container">
+                    <canvas id="keywordTrendChart"></canvas>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -437,8 +443,8 @@
                 <table id="topClientTable"></table>
             </div>
             <div class="card">
-                <h3>Most Common Recurring Tasks</h3>
-                <table id="recurringTable"></table>
+                <h3>Client Diversity by Year</h3>
+                <div class="chart-container"><canvas id="clientDiversityChart"></canvas></div>
             </div>
         </div>
     </div>
@@ -544,10 +550,18 @@
             ],
             techTrend: {
                 years: ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
-                drupal: [847.4,828.8,467.2,583.5,317.9,674.5,493.9,545.4,686.3,713.5,959.0,510.5,406.3,562.5,290.8],
-                wordpress: [0,0,0,0,0,0,268.3,62.3,53.8,102.3,5.0,498.3,639.8,254.8,285.5],
+                drupal: [847.4,835.8,467.2,583.5,321.4,675.8,511.9,545.4,692.3,730.8,960.8,514.0,407.3,562.5,290.8],
+                wordpress: [0,0.8,0,0,0,0,268.3,71.0,57.3,115.3,50.8,501.8,646.8,257.8,315.0],
                 aem: [0,0,0,7.5,140.6,36.3,19.5,197.3,341.0,160.5,31.5,25.5,84.0,83.0,223.0],
-                react: [0,0,0,0,0,0,0,0,0,22.2,24.2,1.0,5.5,10.5,3.5]
+                javascript: [0,9.3,0,27.5,26.8,26.0,12.5,52.9,44.5,71.8,155.5,156.3,44.8,56.5,36.3]
+            },
+            keywordTrend: {
+                years: ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+                design: [248.2,121.2,67.2,31.1,98.9,77.0,69.9,82.0,35.8,38.0,123.5,33.8,81.3,53.5,79.3],
+                mobile: [25.0,78.8,107.7,91.8,22.5,105.3,49.5,25.3,62.0,106.8,93.8,64.0,56.5,70.0,68.5],
+                testing: [160.3,40.9,80.7,62.4,76.5,71.5,70.3,132.8,147.3,207.6,211.3,122.3,182.0,153.0,247.5],
+                meetings: [39.5,20.6,54.2,72.0,38.1,27.4,84.5,74.5,121.3,132.8,120.0,109.5,122.0,82.0,63.3],
+                migration: [3.0,32.5,0,4.5,2.5,0,0.5,40.0,49.3,13.0,241.0,73.8,232.5,102.3,33.5]
             },
             keywords: [
                 {word: "dev", count: 631, hours: 1766},
@@ -621,17 +635,22 @@
                 {year: "2025", client: "Dartmouth College", hours: 473.5},
                 {year: "2026", client: "Dartmouth College", hours: 290.8}
             ],
-            recurring: [
-                {task: "Meetings & Phone Calls", count: 502, hours: 394.3, avg: 0.8},
-                {task: "Weekly Checkin Call", count: 258, hours: 158.5, avg: 0.6},
-                {task: "Weekly Design and Dev Review", count: 170, hours: 133.0, avg: 0.8},
-                {task: "Development", count: 156, hours: 481.8, avg: 3.1},
-                {task: "Quinoa - D10 Upgrade", count: 78, hours: 189.3, avg: 2.4},
-                {task: "Meetings & Calls", count: 73, hours: 55.5, avg: 0.8},
-                {task: "Optum Perks Development", count: 66, hours: 186.8, avg: 2.8},
-                {task: "Optum Health Hub Theme", count: 65, hours: 129.3, avg: 2.0},
-                {task: "Kale Development", count: 59, hours: 199.8, avg: 3.4},
-                {task: "D7 - D9 Migration", count: 50, hours: 167.3, avg: 3.3}
+            clientDiversity: [
+                {year: "2012", clients: 9, hours: 1103, avgPerClient: 122.5},
+                {year: "2013", clients: 11, hours: 1007, avgPerClient: 91.5},
+                {year: "2014", clients: 13, hours: 933, avgPerClient: 71.8},
+                {year: "2015", clients: 11, hours: 971, avgPerClient: 88.3},
+                {year: "2016", clients: 15, hours: 808, avgPerClient: 53.8},
+                {year: "2017", clients: 11, hours: 915, avgPerClient: 83.2},
+                {year: "2018", clients: 9, hours: 935, avgPerClient: 103.9},
+                {year: "2019", clients: 12, hours: 921, avgPerClient: 76.8},
+                {year: "2020", clients: 11, hours: 1243, avgPerClient: 113.0},
+                {year: "2021", clients: 12, hours: 1214, avgPerClient: 101.1},
+                {year: "2022", clients: 15, hours: 1293, avgPerClient: 86.2},
+                {year: "2023", clients: 16, hours: 1269, avgPerClient: 79.3},
+                {year: "2024", clients: 14, hours: 1270, avgPerClient: 90.7},
+                {year: "2025", clients: 19, hours: 1259, avgPerClient: 66.3},
+                {year: "2026", clients: 11, hours: 940, avgPerClient: 85.5}
             ],
             todoCategories: [
                 {name: "Other", hours: 3378, pct: 21.0},
@@ -906,7 +925,31 @@
                     { label: 'Drupal', data: data.techTrend.drupal, borderColor: '#38bdf8', tension: 0.3, pointRadius: 2 },
                     { label: 'WordPress', data: data.techTrend.wordpress, borderColor: '#818cf8', tension: 0.3, pointRadius: 2 },
                     { label: 'Adobe AEM', data: data.techTrend.aem, borderColor: '#f97316', tension: 0.3, pointRadius: 2 },
-                    { label: 'React', data: data.techTrend.react, borderColor: '#4ade80', tension: 0.3, pointRadius: 2 }
+                    { label: 'JavaScript', data: data.techTrend.javascript, borderColor: '#fbbf24', tension: 0.3, pointRadius: 2 }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { labels: { color: chartColors.text } } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: chartColors.grid }, ticks: { color: chartColors.text } },
+                    x: { grid: { display: false }, ticks: { color: chartColors.text } }
+                }
+            }
+        });
+
+        // Keyword Trend Chart
+        new Chart(document.getElementById('keywordTrendChart'), {
+            type: 'line',
+            data: {
+                labels: data.keywordTrend.years,
+                datasets: [
+                    { label: 'Testing', data: data.keywordTrend.testing, borderColor: '#4ade80', tension: 0.3, pointRadius: 2 },
+                    { label: 'Design', data: data.keywordTrend.design, borderColor: '#818cf8', tension: 0.3, pointRadius: 2 },
+                    { label: 'Migration', data: data.keywordTrend.migration, borderColor: '#f97316', tension: 0.3, pointRadius: 2 },
+                    { label: 'Meetings', data: data.keywordTrend.meetings, borderColor: '#fb7185', tension: 0.3, pointRadius: 2 },
+                    { label: 'Mobile', data: data.keywordTrend.mobile, borderColor: '#38bdf8', tension: 0.3, pointRadius: 2 }
                 ]
             },
             options: {
@@ -1004,17 +1047,28 @@
             `).join('')}
         `;
 
-        // Recurring Tasks Table
-        document.getElementById('recurringTable').innerHTML = `
-            <tr><th>Task</th><th class="text-right">Count</th><th class="text-right">Avg</th></tr>
-            ${data.recurring.map(r => `
-                <tr>
-                    <td>${r.task}</td>
-                    <td class="text-right">${r.count}x</td>
-                    <td class="text-right">${r.avg}h</td>
-                </tr>
-            `).join('')}
-        `;
+        // Client Diversity Chart
+        new Chart(document.getElementById('clientDiversityChart'), {
+            type: 'bar',
+            data: {
+                labels: data.clientDiversity.map(d => d.year),
+                datasets: [{
+                    label: 'Clients',
+                    data: data.clientDiversity.map(d => d.clients),
+                    backgroundColor: '#38bdf8',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: chartColors.grid }, ticks: { color: chartColors.text } },
+                    x: { grid: { display: false }, ticks: { color: chartColors.text, maxRotation: 45 } }
+                }
+            }
+        });
 
         // Todo Categories Chart
         new Chart(document.getElementById('todoCategoriesChart'), {
