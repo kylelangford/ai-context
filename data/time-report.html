@@ -92,46 +92,25 @@
             border-radius: 4px;
         }
         .insight-box {
-            background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
-            border: 1px solid #38bdf8;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 0.75rem;
-            padding: 1.25rem;
+            padding: 1.5rem;
             margin-bottom: 1rem;
         }
         .insight-title {
-            color: #38bdf8;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            color: #7dd3fc;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
         .insight-text {
-            color: #cbd5e1;
-            font-size: 0.925rem;
-        }
-        .keyword-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .keyword {
-            background: #334155;
-            padding: 0.35rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.8rem;
-            color: #94a3b8;
-        }
-        .keyword.large {
-            font-size: 1rem;
-            background: #38bdf8;
-            color: #0f172a;
-            font-weight: 500;
-        }
-        .keyword.medium {
-            font-size: 0.9rem;
-            background: #475569;
             color: #e2e8f0;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         .trend-up { color: #4ade80; }
         .trend-down { color: #f87171; }
@@ -393,8 +372,8 @@
         </div>
         <div class="grid-2" style="margin-top: 1.5rem;">
             <div class="card">
-                <h3>High-Effort Tasks (avg > 3 hrs)</h3>
-                <table id="highEffortTable"></table>
+                <h3>Avg Session Length</h3>
+                <div id="avgSessionChart"></div>
             </div>
             <div class="card">
                 <h3>Quick Tasks (avg < 1 hr)</h3>
@@ -426,11 +405,11 @@
         <div class="grid-2">
             <div class="card">
                 <h3>Most Common Keywords</h3>
-                <div class="keyword-cloud" id="keywordCloud"></div>
+                <div id="keywordBubbles" style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center; padding: 1rem;"></div>
             </div>
             <div class="card">
-                <h3>Action Verbs (What You Do)</h3>
-                <table id="actionsTable"></table>
+                <h3>Work Types</h3>
+                <div id="workTypesChart"></div>
             </div>
         </div>
     </div>
@@ -511,20 +490,20 @@
                 {month: "Nov", hours: 1178.8}, {month: "Dec", hours: 1063.0}
             ],
             categories: [
-                {name: "Development", hours: 6626.7, entries: 2727},
-                {name: "Other/Uncategorized", hours: 2616.1, entries: 1312},
-                {name: "Frontend/CSS", hours: 1869.5, entries: 819},
-                {name: "Meetings & Calls", hours: 1321.0, entries: 1418},
-                {name: "Design", hours: 863.2, entries: 266},
-                {name: "QA/Testing", hours: 862.1, entries: 542},
-                {name: "Content/Copy", hours: 417.0, entries: 193},
-                {name: "Drupal", hours: 373.1, entries: 154},
-                {name: "JavaScript/Frontend", hours: 296.8, entries: 132},
-                {name: "Email/Marketing", hours: 281.8, entries: 208},
-                {name: "WordPress", hours: 215.5, entries: 112},
-                {name: "DevOps/Deploy", hours: 167.3, entries: 121},
-                {name: "Admin/PM", hours: 123.1, entries: 129},
-                {name: "Training/Learning", hours: 45.5, entries: 27}
+                {name: "Other", hours: 3378, entries: 1842},
+                {name: "Development", hours: 2854, entries: 1001},
+                {name: "QA/Testing", hours: 2197, entries: 968},
+                {name: "Design/Wireframes", hours: 1840, entries: 746},
+                {name: "Frontend/Styling", hours: 1457, entries: 591},
+                {name: "Meetings", hours: 1264, entries: 1428},
+                {name: "Migration/Upgrade", hours: 1042, entries: 387},
+                {name: "Review/Audit", hours: 511, entries: 296},
+                {name: "Content", hours: 418, entries: 208},
+                {name: "Email", hours: 317, entries: 210},
+                {name: "API/Integration", hours: 312, entries: 145},
+                {name: "Analytics", hours: 207, entries: 161},
+                {name: "DevOps/Deploy", hours: 170, entries: 128},
+                {name: "Training", hours: 114, entries: 49}
             ],
             deepWork: [
                 {year: "2012", deep: 97, frag: 1},
@@ -554,25 +533,21 @@
                 {year: "2026", pct: 14.0}
             ],
             tech: [
-                {name: "Drupal", hours: 783.6, entries: 287},
-                {name: "CSS/Styling", hours: 723.1, entries: 305},
-                {name: "Email", hours: 598.0, entries: 349},
-                {name: "JavaScript", hours: 519.4, entries: 178},
-                {name: "Analytics", hours: 336.2, entries: 226},
-                {name: "API", hours: 289.5, entries: 128},
-                {name: "WordPress", hours: 176.8, entries: 83},
-                {name: "Git", hours: 133.6, entries: 73},
-                {name: "Database", hours: 57.0, entries: 27},
-                {name: "React", hours: 53.5, entries: 18},
-                {name: "PHP", hours: 38.0, entries: 18},
-                {name: "AI/Claude", hours: 33.2, entries: 19}
+                {name: "Drupal", hours: 8887.2, entries: 4135},
+                {name: "WordPress", hours: 2169.8, entries: 1094},
+                {name: "CSS/Styling", hours: 1514.2, entries: 608},
+                {name: "Adobe AEM", hours: 1349.5, entries: 684},
+                {name: "Email", hours: 588.5, entries: 373},
+                {name: "Analytics", hours: 278.9, entries: 184},
+                {name: "JavaScript", hours: 221.5, entries: 88},
+                {name: "React", hours: 54.0, entries: 17}
             ],
             techTrend: {
                 years: ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
-                drupal: [63.5,14.0,0,0,4.6,1.2,19.0,14.0,12.8,28.5,172.2,31.5,219.0,75.0,5.2],
-                wordpress: [0,0.8,0,0,0,0,6.5,8.8,3.0,19.2,45.5,20.5,37.5,1.5,30.0],
-                react: [0,0,0,0,0,0,0,0,0,22.2,24.2,1.0,5.5,10.5,3.5],
-                ai: [0,0,0.2,0,0,0,0,0,0,0,1.2,2.5,0,4.5,26.0]
+                drupal: [847.4,828.8,467.2,583.5,317.9,674.5,493.9,545.4,686.3,713.5,959.0,510.5,406.3,562.5,290.8],
+                wordpress: [0,0,0,0,0,0,268.3,62.3,53.8,102.3,5.0,498.3,639.8,254.8,285.5],
+                aem: [0,0,0,7.5,140.6,36.3,19.5,197.3,341.0,160.5,31.5,25.5,84.0,83.0,223.0],
+                react: [0,0,0,0,0,0,0,0,0,22.2,24.2,1.0,5.5,10.5,3.5]
             },
             keywords: [
                 {word: "dev", count: 631, hours: 1766},
@@ -590,19 +565,10 @@
                 {word: "css", count: 195, hours: 495},
                 {word: "blog", count: 210, hours: 453}
             ],
-            actions: [
-                {verb: "review", count: 697, hours: 705.2},
-                {verb: "design", count: 499, hours: 850.2},
-                {verb: "styling", count: 430, hours: 1075.4},
-                {verb: "update", count: 389, hours: 600.4},
-                {verb: "testing", count: 301, hours: 608.4},
-                {verb: "add", count: 270, hours: 377.0},
-                {verb: "create", count: 248, hours: 480.7},
-                {verb: "updating", count: 216, hours: 358.6},
-                {verb: "implement", count: 213, hours: 397.4},
-                {verb: "adding", count: 170, hours: 273.0},
-                {verb: "setup", count: 121, hours: 257.4},
-                {verb: "build", count: 53, hours: 147.8}
+            workTypes: [
+                {name: "Implement", hours: 4075, entries: 1849, desc: "create, build, setup, styling, testing", color: "#4ade80"},
+                {name: "Strategy", hours: 3034, entries: 2100, desc: "review, design, planning, meetings", color: "#818cf8"},
+                {name: "Maintain", hours: 2626, entries: 1467, desc: "update, fix, add, adjust", color: "#fbbf24"}
             ],
             companies: [
                 {name: "Linkwell Health", hours: 5605.2, entries: 2695},
@@ -622,16 +588,21 @@
                 {name: "Columbia University", hours: 221.7, entries: 127}
             ],
             projects: [
-                {name: "Retainer", company: "Multiple", hours: 1030.3},
                 {name: "CHLE Re-Theme", company: "Linkwell", hours: 1025.8},
-                {name: "*Brunello Admin", company: "Brunello", hours: 900.7},
-                {name: "B2C - Retainer", company: "SumerSports", hours: 865.0},
                 {name: "HLE/CHLE", company: "Linkwell", hours: 819.1},
-                {name: "Miscellaneous", company: "Linkwell", hours: 644.2},
-                {name: "Plan Microsites", company: "Linkwell", hours: 523.3},
-                {name: "D10 & Site Design Update", company: "Dartmouth", hours: 488.7},
-                {name: "Imaginatik Rebuild", company: "Imaginatik", hours: 471.4},
-                {name: "DR Calculator", company: "Enel NA", hours: 456.5}
+                {name: "Plan Microsites", company: "Linkwell", hours: 523.4},
+                {name: "D10 & Site Design Update", company: "Dartmouth", hours: 488.8},
+                {name: "Site Rebuild", company: "Imaginatik", hours: 471.4},
+                {name: "DR Calculator", company: "Enel NA", hours: 456.5},
+                {name: "Optum", company: "Linkwell", hours: 430.3},
+                {name: "PAW Website Redesign", company: "Princeton", hours: 335.9},
+                {name: "Design & Dev", company: "Bally", hours: 333.4},
+                {name: "Penn Stater Website", company: "Penn Stater", hours: 290.8},
+                {name: "B'link Phase 2", company: "Linkwell", hours: 280.0},
+                {name: "Plan Microsites 1.0", company: "Linkwell", hours: 238.8},
+                {name: "Elev8d Dev/Design", company: "Sonima", hours: 218.0},
+                {name: "UHC", company: "Linkwell", hours: 215.8},
+                {name: "Content Hub", company: "ReflexMD", hours: 185.5}
             ],
             topClientByYear: [
                 {year: "2012", client: "Imaginatik", hours: 491.4},
@@ -663,32 +634,27 @@
                 {task: "D7 - D9 Migration", count: 50, hours: 167.3, avg: 3.3}
             ],
             todoCategories: [
-                {name: "Development", hours: 3406, pct: 30.8},
-                {name: "Meetings", hours: 792, pct: 7.2},
-                {name: "QA/Testing", hours: 586, pct: 5.3},
-                {name: "Migration/Upgrade", hours: 570, pct: 5.2},
-                {name: "Theming/Styling", hours: 513, pct: 4.6},
-                {name: "Content", hours: 448, pct: 4.1},
-                {name: "API/Integration", hours: 366, pct: 3.3},
-                {name: "Design", hours: 315, pct: 2.8},
-                {name: "Support/Misc", hours: 186, pct: 1.7},
-                {name: "Other", hours: 3745, pct: 33.9}
+                {name: "Other", hours: 3378, pct: 21.0},
+                {name: "Development", hours: 2854, pct: 17.7},
+                {name: "QA/Testing", hours: 2197, pct: 13.7},
+                {name: "Design/Wireframes", hours: 1840, pct: 11.4},
+                {name: "Frontend/Styling", hours: 1457, pct: 9.1},
+                {name: "Meetings", hours: 1264, pct: 7.9},
+                {name: "Migration/Upgrade", hours: 1042, pct: 6.5},
+                {name: "Review/Audit", hours: 511, pct: 3.2},
+                {name: "Content", hours: 418, pct: 2.6},
+                {name: "API/Integration", hours: 312, pct: 1.9}
             ],
             workMixByRole: [
                 {role: "Interactive Designer", meetings: 3.4, dev: 24.7, theming: 3.3, migration: 0.2, qa: 1.0, design: 10.8},
                 {role: "Senior Frontend Dev", meetings: 8.1, dev: 30.0, theming: 5.5, migration: 5.6, qa: 4.5, design: 2.2},
                 {role: "Tech Lead", meetings: 5.7, dev: 37.1, theming: 0.3, migration: 6.0, qa: 6.9, design: 0.8}
             ],
-            highEffortTasks: [
-                {task: "Create client side browse application", avg: 5.25, count: 10, hours: 52.5},
-                {task: "Filtering - Adv Filter Options", avg: 5.21, count: 14, hours: 73.0},
-                {task: "Player Updates", avg: 4.83, count: 28, hours: 135.3},
-                {task: "Broccoli Upgrade - Landing Page", avg: 4.71, count: 13, hours: 61.3},
-                {task: "Dev for Mailchimp Embed form", avg: 4.09, count: 14, hours: 57.3},
-                {task: "Calculator App - design & dev", avg: 3.92, count: 13, hours: 50.9},
-                {task: "Game PREVIEWS implementation", avg: 3.56, count: 43, hours: 153.0},
-                {task: "Kale Development", avg: 3.39, count: 59, hours: 199.8},
-                {task: "D7 - D9 Migration (hrbox)", avg: 3.35, count: 50, hours: 167.3}
+            avgSession: [
+                {type: "Overall", avg: 1.97, sessions: 8160, color: "#94a3b8"},
+                {type: "Implement", avg: 2.21, sessions: 1831, color: "#4ade80"},
+                {type: "Maintain", avg: 1.78, sessions: 1392, color: "#fbbf24"},
+                {type: "Strategy", avg: 1.45, sessions: 2083, color: "#818cf8"}
             ],
             quickTasks: [
                 {task: "Meetings & Phone Calls", avg: 0.79, count: 502, hours: 394.3},
@@ -939,8 +905,8 @@
                 datasets: [
                     { label: 'Drupal', data: data.techTrend.drupal, borderColor: '#38bdf8', tension: 0.3, pointRadius: 2 },
                     { label: 'WordPress', data: data.techTrend.wordpress, borderColor: '#818cf8', tension: 0.3, pointRadius: 2 },
-                    { label: 'React', data: data.techTrend.react, borderColor: '#4ade80', tension: 0.3, pointRadius: 2 },
-                    { label: 'AI/Claude', data: data.techTrend.ai, borderColor: '#fbbf24', tension: 0.3, pointRadius: 2 }
+                    { label: 'Adobe AEM', data: data.techTrend.aem, borderColor: '#f97316', tension: 0.3, pointRadius: 2 },
+                    { label: 'React', data: data.techTrend.react, borderColor: '#4ade80', tension: 0.3, pointRadius: 2 }
                 ]
             },
             options: {
@@ -954,25 +920,47 @@
             }
         });
 
-        // Keyword Cloud
-        const maxCount = Math.max(...data.keywords.map(k => k.count));
-        document.getElementById('keywordCloud').innerHTML = data.keywords.map(k => {
-            const size = k.count / maxCount;
-            const cls = size > 0.8 ? 'large' : size > 0.5 ? 'medium' : '';
-            return `<span class="keyword ${cls}">${k.word} (${k.hours}h)</span>`;
+        // Keyword Bubbles
+        const maxHours = Math.max(...data.keywords.map(k => k.hours));
+        const minSize = 50, maxSize = 120;
+        const colors = ['#38bdf8', '#818cf8', '#a78bfa', '#4ade80', '#fbbf24', '#fb7185', '#2dd4bf', '#f472b6', '#67e8f9', '#c4b5fd', '#86efac', '#fcd34d'];
+        document.getElementById('keywordBubbles').innerHTML = data.keywords.map((k, i) => {
+            const size = minSize + (k.hours / maxHours) * (maxSize - minSize);
+            const color = colors[i % colors.length];
+            return `<div style="
+                width: ${size}px;
+                height: ${size}px;
+                border-radius: 50%;
+                background: ${color}22;
+                border: 2px solid ${color};
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0.25rem;
+                cursor: default;
+            " title="${k.word}: ${k.hours} hours (${k.count} entries)">
+                <span style="font-size: ${Math.max(10, size/8)}px; font-weight: 600; color: ${color};">${k.word}</span>
+                <span style="font-size: ${Math.max(9, size/10)}px; color: #94a3b8;">${k.hours}h</span>
+            </div>`;
         }).join('');
 
-        // Actions Table
-        document.getElementById('actionsTable').innerHTML = `
-            <tr><th>Action</th><th class="text-right">Count</th><th class="text-right">Hours</th></tr>
-            ${data.actions.map(a => `
-                <tr>
-                    <td>${a.verb}</td>
-                    <td class="text-right">${a.count}</td>
-                    <td class="text-right">${a.hours.toLocaleString()}</td>
-                </tr>
-            `).join('')}
-        `;
+        // Work Types Chart
+        const totalWorkTypeHours = data.workTypes.reduce((sum, w) => sum + w.hours, 0);
+        document.getElementById('workTypesChart').innerHTML = data.workTypes.map(w => {
+            const pct = (w.hours / totalWorkTypeHours * 100).toFixed(1);
+            return `<div style="margin-bottom: 1.25rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span style="font-weight: 600; color: ${w.color};">${w.name}</span>
+                    <span style="color: #e2e8f0;">${w.hours.toLocaleString()} hrs (${pct}%)</span>
+                </div>
+                <div style="background: #1e293b; border-radius: 0.5rem; height: 1.5rem; overflow: hidden;">
+                    <div style="background: ${w.color}; height: 100%; width: ${pct}%; border-radius: 0.5rem;"></div>
+                </div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.25rem;">${w.desc}</div>
+            </div>`;
+        }).join('');
 
         // Companies Table
         const maxCompanyHours = Math.max(...data.companies.map(c => c.hours));
@@ -996,7 +984,7 @@
             ${data.projects.map(p => `
                 <tr>
                     <td>
-                        ${p.name}
+                        <span style="color: #64748b;">${p.company} -</span> ${p.name}
                         <div class="bar"><div class="bar-fill" style="width: ${(p.hours / maxProjectHours * 100)}%"></div></div>
                     </td>
                     <td class="text-right">${p.hours.toLocaleString()}</td>
@@ -1069,17 +1057,21 @@
             <tr><td>Deep work</td><td class="text-right">3-5h</td><td class="text-right">Migrations, apps</td></tr>
         `;
 
-        // High Effort Tasks Table
-        document.getElementById('highEffortTable').innerHTML = `
-            <tr><th>Task</th><th class="text-right">Avg</th><th class="text-right">Total</th></tr>
-            ${data.highEffortTasks.map(t => `
-                <tr>
-                    <td>${t.task}</td>
-                    <td class="text-right">${t.avg}h</td>
-                    <td class="text-right">${t.hours}h</td>
-                </tr>
-            `).join('')}
-        `;
+        // Average Session Length
+        const maxAvg = Math.max(...data.avgSession.map(s => s.avg));
+        document.getElementById('avgSessionChart').innerHTML = data.avgSession.map(s => {
+            const barWidth = (s.avg / maxAvg * 100).toFixed(0);
+            return `<div style="margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                    <span style="color: ${s.color}; font-weight: 500;">${s.type}</span>
+                    <span style="color: #e2e8f0; font-weight: 600;">${s.avg} hrs</span>
+                </div>
+                <div style="background: #1e293b; border-radius: 0.25rem; height: 0.75rem; overflow: hidden;">
+                    <div style="background: ${s.color}; height: 100%; width: ${barWidth}%; border-radius: 0.25rem;"></div>
+                </div>
+                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.2rem;">${s.sessions.toLocaleString()} sessions</div>
+            </div>`;
+        }).join('');
 
         // Quick Tasks Table
         document.getElementById('quickTasksTable').innerHTML = `
