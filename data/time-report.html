@@ -170,11 +170,68 @@
         .tab:hover:not(.active) {
             background: #475569;
         }
+        .career-timeline {
+            display: flex;
+            gap: 0;
+            margin-bottom: 2rem;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+        .career-role {
+            padding: 1rem 1.25rem;
+            background: #1e293b;
+            border-right: 1px solid #334155;
+            flex: 1;
+            position: relative;
+        }
+        .career-role:last-child {
+            border-right: none;
+        }
+        .career-role.current {
+            background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+            border-top: 2px solid #38bdf8;
+        }
+        .role-title {
+            font-weight: 600;
+            color: #f8fafc;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .role-dates {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .role-hours {
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
     <h1>Time Report Dashboard</h1>
-    <h2>Kyle Langford | Mar 2012 - Sep 2026 | 14+ Years of Time Tracking</h2>
+    <h2>Kyle Langford | Brunello, Inc. | Mar 2012 - Present</h2>
+
+    <!-- Career Timeline -->
+    <div class="career-timeline">
+        <div class="career-role">
+            <div class="role-title">Interactive Designer</div>
+            <div class="role-dates">Mar 2012 - Jan 2018 (5 yrs 11 mos)</div>
+            <div class="role-hours">5,736 hrs</div>
+        </div>
+        <div class="career-role">
+            <div class="role-title">Senior Frontend Developer</div>
+            <div class="role-dates">Jan 2018 - Jan 2025 (7 yrs)</div>
+            <div class="role-hours">8,144 hrs</div>
+        </div>
+        <div class="career-role current">
+            <div class="role-title">Tech Lead</div>
+            <div class="role-dates">Jan 2025 - Present</div>
+            <div class="role-hours">2,199 hrs (YTD)</div>
+        </div>
+    </div>
 
     <!-- Key Stats -->
     <div class="stats">
@@ -311,6 +368,37 @@
                 <div class="chart-container">
                     <canvas id="meetingTrendChart"></canvas>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Analysis -->
+    <div class="section">
+        <div class="section-title">Task Analysis</div>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Todo Categories</h3>
+                <div class="chart-container">
+                    <canvas id="todoCategoriesChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Work Mix by Role</h3>
+                <table id="workMixTable"></table>
+            </div>
+            <div class="card">
+                <h3>Task Complexity</h3>
+                <table id="taskComplexityTable"></table>
+            </div>
+        </div>
+        <div class="grid-2" style="margin-top: 1.5rem;">
+            <div class="card">
+                <h3>High-Effort Tasks (avg > 3 hrs)</h3>
+                <table id="highEffortTable"></table>
+            </div>
+            <div class="card">
+                <h3>Quick Tasks (avg < 1 hr)</h3>
+                <table id="quickTasksTable"></table>
             </div>
         </div>
     </div>
@@ -488,7 +576,6 @@
             },
             keywords: [
                 {word: "dev", count: 631, hours: 1766},
-                {word: "page", count: 614, hours: 1320},
                 {word: "development", count: 560, hours: 1538},
                 {word: "updates", count: 546, hours: 1180},
                 {word: "styling", count: 430, hours: 1075},
@@ -497,9 +584,9 @@
                 {word: "mobile", count: 327, hours: 901},
                 {word: "meetings", count: 708, hours: 564},
                 {word: "review", count: 697, hours: 705},
+                {word: "landing page", count: 274, hours: 602},
                 {word: "testing", count: 301, hours: 608},
                 {word: "content", count: 267, hours: 684},
-                {word: "landing", count: 274, hours: 602},
                 {word: "css", count: 195, hours: 495},
                 {word: "blog", count: 210, hours: 453}
             ],
@@ -574,6 +661,44 @@
                 {task: "Optum Health Hub Theme", count: 65, hours: 129.3, avg: 2.0},
                 {task: "Kale Development", count: 59, hours: 199.8, avg: 3.4},
                 {task: "D7 - D9 Migration", count: 50, hours: 167.3, avg: 3.3}
+            ],
+            todoCategories: [
+                {name: "Development", hours: 3406, pct: 30.8},
+                {name: "Meetings", hours: 792, pct: 7.2},
+                {name: "QA/Testing", hours: 586, pct: 5.3},
+                {name: "Migration/Upgrade", hours: 570, pct: 5.2},
+                {name: "Theming/Styling", hours: 513, pct: 4.6},
+                {name: "Content", hours: 448, pct: 4.1},
+                {name: "API/Integration", hours: 366, pct: 3.3},
+                {name: "Design", hours: 315, pct: 2.8},
+                {name: "Support/Misc", hours: 186, pct: 1.7},
+                {name: "Other", hours: 3745, pct: 33.9}
+            ],
+            workMixByRole: [
+                {role: "Interactive Designer", meetings: 3.4, dev: 24.7, theming: 3.3, migration: 0.2, qa: 1.0, design: 10.8},
+                {role: "Senior Frontend Dev", meetings: 8.1, dev: 30.0, theming: 5.5, migration: 5.6, qa: 4.5, design: 2.2},
+                {role: "Tech Lead", meetings: 5.7, dev: 37.1, theming: 0.3, migration: 6.0, qa: 6.9, design: 0.8}
+            ],
+            highEffortTasks: [
+                {task: "Create client side browse application", avg: 5.25, count: 10, hours: 52.5},
+                {task: "Filtering - Adv Filter Options", avg: 5.21, count: 14, hours: 73.0},
+                {task: "Player Updates", avg: 4.83, count: 28, hours: 135.3},
+                {task: "Broccoli Upgrade - Landing Page", avg: 4.71, count: 13, hours: 61.3},
+                {task: "Dev for Mailchimp Embed form", avg: 4.09, count: 14, hours: 57.3},
+                {task: "Calculator App - design & dev", avg: 3.92, count: 13, hours: 50.9},
+                {task: "Game PREVIEWS implementation", avg: 3.56, count: 43, hours: 153.0},
+                {task: "Kale Development", avg: 3.39, count: 59, hours: 199.8},
+                {task: "D7 - D9 Migration (hrbox)", avg: 3.35, count: 50, hours: 167.3}
+            ],
+            quickTasks: [
+                {task: "Meetings & Phone Calls", avg: 0.79, count: 502, hours: 394.3},
+                {task: "Weekly Checkin Call", avg: 0.61, count: 258, hours: 158.5},
+                {task: "Weekly Design and Dev Review", avg: 0.78, count: 170, hours: 133.0},
+                {task: "Meetings & Calls", avg: 0.76, count: 73, hours: 55.5},
+                {task: "Misc. support", avg: 0.80, count: 46, hours: 36.8},
+                {task: "Hours/Time entry", avg: 0.67, count: 45, hours: 30.0},
+                {task: "Google Analytics", avg: 0.95, count: 22, hours: 21.0},
+                {task: "Project Management", avg: 0.75, count: 15, hours: 11.3}
             ]
         };
 
@@ -899,6 +1024,71 @@
                     <td>${r.task}</td>
                     <td class="text-right">${r.count}x</td>
                     <td class="text-right">${r.avg}h</td>
+                </tr>
+            `).join('')}
+        `;
+
+        // Todo Categories Chart
+        new Chart(document.getElementById('todoCategoriesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: data.todoCategories.map(c => c.name),
+                datasets: [{
+                    data: data.todoCategories.map(c => c.hours),
+                    backgroundColor: ['#38bdf8', '#818cf8', '#a78bfa', '#4ade80', '#fbbf24', '#fb7185', '#2dd4bf', '#f472b6', '#64748b', '#475569']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { color: chartColors.text, boxWidth: 10, font: { size: 11 } } }
+                }
+            }
+        });
+
+        // Work Mix by Role Table
+        document.getElementById('workMixTable').innerHTML = `
+            <tr><th>Role</th><th class="text-right">Dev</th><th class="text-right">Meet</th><th class="text-right">QA</th><th class="text-right">Design</th></tr>
+            ${data.workMixByRole.map(r => `
+                <tr>
+                    <td>${r.role.split(' ')[0]}</td>
+                    <td class="text-right">${r.dev}%</td>
+                    <td class="text-right">${r.meetings}%</td>
+                    <td class="text-right">${r.qa}%</td>
+                    <td class="text-right">${r.design}%</td>
+                </tr>
+            `).join('')}
+        `;
+
+        // Task Complexity Table
+        document.getElementById('taskComplexityTable').innerHTML = `
+            <tr><th>Type</th><th class="text-right">Avg</th><th class="text-right">Insight</th></tr>
+            <tr><td>Quick tasks</td><td class="text-right">0.7h</td><td class="text-right">Meetings, admin</td></tr>
+            <tr><td>Medium tasks</td><td class="text-right">1.5-2h</td><td class="text-right">Features, fixes</td></tr>
+            <tr><td>Deep work</td><td class="text-right">3-5h</td><td class="text-right">Migrations, apps</td></tr>
+        `;
+
+        // High Effort Tasks Table
+        document.getElementById('highEffortTable').innerHTML = `
+            <tr><th>Task</th><th class="text-right">Avg</th><th class="text-right">Total</th></tr>
+            ${data.highEffortTasks.map(t => `
+                <tr>
+                    <td>${t.task}</td>
+                    <td class="text-right">${t.avg}h</td>
+                    <td class="text-right">${t.hours}h</td>
+                </tr>
+            `).join('')}
+        `;
+
+        // Quick Tasks Table
+        document.getElementById('quickTasksTable').innerHTML = `
+            <tr><th>Task</th><th class="text-right">Avg</th><th class="text-right">Count</th></tr>
+            ${data.quickTasks.map(t => `
+                <tr>
+                    <td>${t.task}</td>
+                    <td class="text-right">${t.avg}h</td>
+                    <td class="text-right">${t.count}x</td>
                 </tr>
             `).join('')}
         `;
