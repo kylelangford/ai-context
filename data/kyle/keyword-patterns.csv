@@ -1,0 +1,56 @@
+type,name,group,patterns
+keyword,updates,,update|updates to
+keyword,calls,,call|meeting|huddle
+keyword,review,,review|audit
+keyword,testing,,test|qa|bug
+keyword,design,,design|mockup|wireframe
+keyword,content,,content|copy
+keyword,dev,,dev|development|build
+keyword,fix,,fix|hotfix|resolve
+keyword,styling,,styl|css|sass|tailwind
+keyword,mobile,,mobile|responsive
+keyword,deploy,,deploy|deployment|launch
+keyword,forms,,form|webform|submission
+keyword,migration,,migrat|import|upgrade
+keyword,components,,component|module|block
+category,Client Calls,Communication,call w/|call with|phone call|intro call|kickoff call|kick-off call|biweekly call|call prep|questions for call
+category,Status/Weekly Calls,Communication,status call|weekly call|weekly checkin|weekly check-in|weekly product|weekly status|weekly tech call|biweekly huddle|weekly huddle|weekly design
+category,Scrum/Standups,Communication,scrum|huddle|standup|stand-up|daily standup|sync|retro|sprint planning|bi-weekly huddle
+category,Email Processing,Communication,process email|respond to email|email to-do|correspondence|email correspondence|inbox|email response
+category,QA/Testing,QA & Support,qa| test|testing|bug fix|round 1 qa|round 2 qa|qa list|qa feedback|qa items|debug|troubleshoot
+category,Troubleshooting,QA & Support,troubleshoot|debug|issue|problem|fix|hotfix|bug|resolve|broken|error
+category,Site Updates,Site Work,site update|misc update|updates to|content update|copy update|minor update|quick update
+category,Content Updates,Site Work,content|copy update|adding content|page content|text update|copy change
+category,Templates,Site Work,template|twig|theme|theming|layout
+category,Page Building,Site Work,page build|build page|landing page|homepage|create page|new page|services page|about page
+category,Blog Work,Site Work,blog|article|post|news|magazine
+category,Design/Visual,Design,design review|design audit|visual|ui design|redesign|design with|review design|design and dev
+category,Images/Graphics,Design,image|graphic|banner|photo|logo|icon|artwork|illustration|visual asset|photo gallery
+category,Wireframes/UX,Design,wireframe|mockup|prototype|ux|figma|sketch|xd|user flow|wireframing
+category,Video Production,Design,video|youtube|vimeo|embed video|video player|video component|video walkthru
+category,PM/Basecamp Admin,Admin,basecamp|trello|asana|jira|clickup|project management|pm:|trello cleanup|trello board|review trello|sprint
+category,Billing/Finance,Admin,billing|invoice|qb|quickbooks|banking|payment|pricing|budget|cost
+category,Estimates/Proposals,Admin,estimate|proposal|scope|quote|pricing|roadmap|timeline|sow
+category,Day Planning,Admin,plan day|plan my day|organize todo|review projects|priorities|planning|2026 planning|daily planning|week planning
+category,Research/Documentation,Admin,research|documentation|document|spec|requirements|review code|code review|audit
+category,Navigation/Menu,Technical,nav|menu|header|footer|subnav|mobile menu|dropdown|mega menu|sticky footer|mobile nav
+category,Forms,Technical,form|webform|form validation|form submit|contact form|form handler|form field|submission
+category,Server/Hosting,Technical,server|hosting|dns|ssl|pantheon|acquia|wpengine|deployment|deploy|devops|lando|docker|env setup
+category,Launch/Go-live,Technical,launch|go live|go-live|golive|pre-launch|post launch|soft launch|launch prep|launch support
+category,Email Marketing,Technical,email template|code email|email build|newsletter|email campaign|braze|mailchimp
+category,Migration/Import,Technical,migrat|import|export|upgrade|d7|d9|d10|importer|data migration|sync
+category,Analytics/SEO,Technical,analytics|seo|gtm|ga4|google tag|tracking|tag manager|conversion|metrics
+category,CSS/Styling,Technical,css|styling|sass|scss|tailwind|responsive|mobile styling|typography|spacing|colors
+category,Components/Modules,Technical,component|module|block|widget|plugin|custom module|acf block|gutenberg
+category,Meetings,Communication,meeting|call|conference|zoom|teams
+category,AI/Automation,AI/Automation, ai | ai,|ai workflow|ai agent|ai project|ai prompts|claude|mcp server|mcp |gpt|chatgpt|copilot|llm|openai|automation|automated|prompt engineering
+tech,Drupal,Technical,drupal|d7|d9|d10|twig
+tech,WordPress,Technical,wordpress|wp |wpengine|elementor|gutenberg|acf
+tech,Adobe AEM,Technical,aem|adobe
+tech,React,Technical,react|vue|angular|astro
+tech,CSS/Tailwind,Technical,css|sass|scss|tailwind|styling
+tech,JavaScript,Technical,javascript|js |typescript|node
+tech,Pantheon,Technical,pantheon|terminus
+tech,Acquia,Technical,acquia|blt
+tech,Git/DevOps,Technical,git|github|deploy|ci/cd|lando|docker
+tech,Salesforce,Technical,salesforce|pardot
