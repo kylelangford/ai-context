@@ -721,28 +721,53 @@
             }
         });
 
-        // Monthly Chart
+        // Monthly Chart - restructured with years as lines
+        const monthLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const yearColors = {
+            '2012': '#64748b', '2013': '#475569', '2014': '#94a3b8',
+            '2015': '#6366f1', '2016': '#8b5cf6', '2017': '#a78bfa',
+            '2018': '#06b6d4', '2019': '#0ea5e9', '2020': '#38bdf8',
+            '2021': '#22c55e', '2022': '#4ade80', '2023': '#fbbf24',
+            '2024': '#f97316', '2025': '#f43f5e', '2026': '#ec4899'
+        };
+
+        // Group monthly data by year
+        const monthlyByYear = {};
+        data.monthly.forEach(d => {
+            const [year, month] = d.month.split('-');
+            if (!monthlyByYear[year]) monthlyByYear[year] = Array(12).fill(null);
+            monthlyByYear[year][parseInt(month) - 1] = d.hours;
+        });
+
+        const monthlyDatasets = Object.entries(monthlyByYear).map(([year, hours]) => ({
+            label: year,
+            data: hours,
+            borderColor: yearColors[year] || chartColors.primary,
+            backgroundColor: 'transparent',
+            tension: 0.3,
+            pointRadius: 2,
+            borderWidth: year >= '2024' ? 2.5 : 1.5
+        }));
+
         new Chart(document.getElementById('monthlyChart'), {
             type: 'line',
             data: {
-                labels: data.monthly.map(d => d.month),
-                datasets: [{
-                    label: 'Hours',
-                    data: data.monthly.map(d => d.hours),
-                    borderColor: chartColors.primary,
-                    backgroundColor: 'rgba(56, 189, 248, 0.1)',
-                    fill: true,
-                    tension: 0.3,
-                    pointRadius: 0
-                }]
+                labels: monthLabels,
+                datasets: monthlyDatasets
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: { color: chartColors.text, boxWidth: 12, font: { size: 10 } }
+                    }
+                },
                 scales: {
                     y: { beginAtZero: true, grid: { color: chartColors.grid }, ticks: { color: chartColors.text } },
-                    x: { grid: { display: false }, ticks: { color: chartColors.text, maxTicksLimit: 12 } }
+                    x: { grid: { display: false }, ticks: { color: chartColors.text } }
                 }
             }
         });
