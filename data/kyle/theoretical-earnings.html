@@ -111,10 +111,10 @@
             <strong>Rate:</strong> $135/hr
         </div>
         <div class="rate-item">
-            <span class="badge badge-high">Billable</span> 95% (dev, design, QA, client calls)
+            <span class="badge badge-high">Billable</span> 95% (dev, design, styling, client calls)
         </div>
         <div class="rate-item">
-            <span class="badge badge-medium">Support</span> 70% (research, status calls)
+            <span class="badge badge-medium">Support</span> 70% (QA, testing, bugs, troubleshooting)
         </div>
         <div class="rate-item">
             <span class="badge badge-low">Overhead</span> 10% (admin, planning, scrum, standups, setup, env)
@@ -231,60 +231,60 @@
         });
 
         // Client data: [company, total_hours, high_hours (billable), med_hours (support), low_hours (overhead)]
-        // HIGH = dev, design, QA, testing, client calls, styling, components, content, JS, HTML, updates, fixes, etc.
-        // MED = blank/uncategorized descriptions only
+        // HIGH = dev, design, client calls, styling, components, content, JS, HTML, updates, fixes, etc.
+        // MED = QA, testing, bugs, troubleshooting, blank descriptions
         // LOW = planning, admin, estimates, email, scrum, standups, sync, setup, env, product meetings, docs
         const clientData = [
-            ["Linkwell Health", 2780.0, 1812.8, 654.0, 313.3],
-            ["Enel NA", 948.3, 482.8, 404.5, 61.0],
-            ["SumerSports", 879.5, 417.5, 413.0, 49.0],
-            ["Dartmouth College", 818.3, 503.8, 225.5, 89.0],
-            ["GiggleFiber", 349.3, 258.5, 70.8, 20.0],
-            ["Vicinity Energy", 348.3, 219.0, 102.0, 27.3],
-            ["Penn Stater", 290.8, 179.3, 65.8, 45.8],
-            ["ReflexMD", 251.8, 160.8, 84.3, 6.8],
-            ["Columbia University", 221.8, 92.3, 115.5, 14.0],
-            ["Cottonball", 171.3, 106.8, 58.5, 6.0],
-            ["Mental", 127.0, 76.0, 45.8, 5.3],
-            ["Rollworks", 110.3, 53.3, 48.3, 8.8],
-            ["Safewaze", 100.5, 63.0, 32.5, 5.0],
-            ["Non Profit Quarterly", 76.5, 57.0, 14.3, 5.3],
-            ["Gray Associates", 74.8, 39.5, 30.0, 5.3],
-            ["EforAll", 61.0, 23.8, 31.8, 5.5],
-            ["BlueZones", 56.0, 48.5, 4.0, 3.5]
+            ["Linkwell Health", 2780.0, 1418.8, 1048.0, 313.3],
+            ["Enel NA", 948.3, 348.0, 539.3, 61.0],
+            ["SumerSports", 879.5, 287.0, 543.5, 49.0],
+            ["Dartmouth College", 818.3, 416.0, 313.3, 89.0],
+            ["GiggleFiber", 349.3, 162.5, 166.8, 20.0],
+            ["Vicinity Energy", 348.3, 183.4, 137.6, 27.3],
+            ["Penn Stater", 290.8, 165.0, 80.0, 45.8],
+            ["ReflexMD", 251.8, 109.3, 135.8, 6.8],
+            ["Columbia University", 221.8, 63.0, 144.8, 14.0],
+            ["Cottonball", 171.3, 67.8, 97.5, 6.0],
+            ["Mental", 127.0, 52.5, 69.3, 5.3],
+            ["Rollworks", 110.3, 49.3, 52.3, 8.8],
+            ["Safewaze", 100.5, 61.3, 34.3, 5.0],
+            ["Non Profit Quarterly", 76.5, 44.3, 27.0, 5.3],
+            ["Gray Associates", 74.8, 31.8, 37.8, 5.3],
+            ["EforAll", 61.0, 15.3, 40.3, 5.5],
+            ["BlueZones", 56.0, 37.3, 15.3, 3.5]
         ];
 
         // Project data: [company, project, total_hours, high_hours (billable), med_hours (support), low_hours (overhead)]
         const projectData = [
-            ["Linkwell", "CHLE Re-Theme", 1025.8, 658.0, 278.5, 89.3],
-            ["SumerSports", "B2C Retainer", 865.0, 411.8, 405.8, 47.5],
-            ["Dartmouth", "D10 & Site Design", 488.8, 291.3, 152.8, 44.8],
-            ["Enel", "DR Calculator", 456.5, 222.5, 207.0, 27.0],
-            ["Linkwell", "Miscellaneous", 454.8, 182.8, 143.5, 128.5],
-            ["Linkwell", "Optum", 430.3, 337.8, 59.3, 33.3],
-            ["GiggleFiber", "Retainer", 349.3, 258.5, 70.8, 20.0],
-            ["Vicinity", "Support Retainer", 348.3, 219.0, 102.0, 27.3],
-            ["Enel", "Retainer", 339.0, 181.8, 125.8, 31.5],
-            ["Penn Stater", "Website", 290.8, 179.3, 65.8, 45.8],
-            ["Linkwell", "B'link Dev/Misc", 286.3, 207.8, 55.0, 23.5],
-            ["Dartmouth", "Monthly Retainer", 226.0, 127.5, 60.3, 38.3],
-            ["Linkwell", "UHC", 215.8, 145.5, 53.0, 17.3],
-            ["ReflexMD", "Content Hub", 185.5, 106.0, 72.8, 6.8],
-            ["Cottonball", "Front-end Dev", 170.5, 106.0, 58.5, 6.0],
-            ["Enel", "EGP Wind Landing", 141.5, 72.8, 66.3, 2.5],
-            ["Mental", "Misc. Support", 127.0, 76.0, 45.8, 5.3],
-            ["Columbia", "Magazine", 99.5, 54.3, 39.8, 5.5],
-            ["Linkwell", "B'link Phase 2", 98.5, 66.5, 27.8, 4.3],
-            ["Linkwell", "America's Best", 93.8, 86.5, 5.0, 2.3],
-            ["Dartmouth", "In Memory", 83.0, 72.5, 5.5, 5.0],
-            ["Linkwell", "HLE Dashboard", 79.5, 73.5, 0.0, 6.0],
-            ["Safewaze", "Website UX/Design", 79.3, 48.8, 25.5, 5.0],
-            ["Gray", "Services Retainer", 74.8, 39.5, 30.0, 5.3],
+            ["Linkwell", "CHLE Re-Theme", 1025.8, 525.5, 411.0, 89.3],
+            ["SumerSports", "B2C Retainer", 865.0, 282.8, 534.8, 47.5],
+            ["Dartmouth", "D10 & Site Design", 488.8, 249.3, 194.8, 44.8],
+            ["Enel", "DR Calculator", 456.5, 161.3, 268.3, 27.0],
+            ["Linkwell", "Miscellaneous", 454.8, 169.3, 157.0, 128.5],
+            ["Linkwell", "Optum", 430.3, 229.5, 167.5, 33.3],
+            ["GiggleFiber", "Retainer", 349.3, 162.5, 166.8, 20.0],
+            ["Vicinity", "Support Retainer", 348.3, 183.4, 137.6, 27.3],
+            ["Enel", "Retainer", 339.0, 120.8, 186.8, 31.5],
+            ["Penn Stater", "Website", 290.8, 165.0, 80.0, 45.8],
+            ["Linkwell", "B'link Dev/Misc", 286.3, 175.8, 87.0, 23.5],
+            ["Dartmouth", "Monthly Retainer", 226.0, 95.5, 92.3, 38.3],
+            ["Linkwell", "UHC", 215.8, 122.3, 76.3, 17.3],
+            ["ReflexMD", "Content Hub", 185.5, 68.3, 110.5, 6.8],
+            ["Cottonball", "Front-end Dev", 170.5, 67.0, 97.5, 6.0],
+            ["Enel", "EGP Wind Landing", 141.5, 64.5, 74.5, 2.5],
+            ["Mental", "Misc. Support", 127.0, 52.5, 69.3, 5.3],
+            ["Columbia", "Magazine", 99.5, 27.8, 66.3, 5.5],
+            ["Linkwell", "B'link Phase 2", 98.5, 40.8, 53.5, 4.3],
+            ["Linkwell", "America's Best", 93.8, 61.0, 30.5, 2.3],
+            ["Dartmouth", "In Memory", 83.0, 64.0, 14.0, 5.0],
+            ["Linkwell", "HLE Dashboard", 79.5, 54.5, 19.0, 6.0],
+            ["Safewaze", "Website UX/Design", 79.3, 47.3, 27.0, 5.0],
+            ["Gray", "Services Retainer", 74.8, 31.8, 37.8, 5.3],
             ["Columbia", "FY24 Endowment", 66.3, 13.3, 53.0, 0.0],
-            ["Rollworks", "Buyer Builder", 66.3, 37.3, 25.5, 3.5],
-            ["Linkwell", "Corporate Site", 57.5, 37.3, 13.0, 7.3],
-            ["BlueZones", "Website MVP", 56.0, 48.5, 4.0, 3.5],
-            ["ReflexMD", "Misc. Support", 52.8, 44.8, 8.0, 0.0]
+            ["Rollworks", "Buyer Builder", 66.3, 34.3, 28.5, 3.5],
+            ["Linkwell", "Corporate Site", 57.5, 28.8, 21.5, 7.3],
+            ["BlueZones", "Website MVP", 56.0, 37.3, 15.3, 3.5],
+            ["ReflexMD", "Misc. Support", 52.8, 36.0, 16.8, 0.0]
         ];
 
         function calcEarnings(total, high, medQA, low) {
@@ -313,13 +313,13 @@
                 netEarnings,
                 netEfficiency
             };
-        }).sort((a, b) => b.netEarnings - a.netEarnings);
+        }).sort((a, b) => b.netEfficiency - a.netEfficiency);
 
         // Process project data
         const projects = projectData.map(([company, project, total, high, medQA, low]) => {
             const calc = calcEarnings(total, high, medQA, low);
             return { company, project, total, ...calc };
-        }).sort((a, b) => b.theoretical - a.theoretical);
+        }).sort((a, b) => b.efficiency - a.efficiency);
 
         // Totals
         const totals = clients.reduce((acc, c) => ({
