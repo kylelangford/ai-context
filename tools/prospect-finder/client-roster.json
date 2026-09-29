@@ -1,0 +1,544 @@
+{
+  "clients": [
+    {
+      "name": "Adidas",
+      "industry": "Consumer Products / Sportswear",
+      "orgType": "Enterprise",
+      "size": "Large (10,000+)",
+      "geography": "Global",
+      "characteristics": ["Fortune 500", "B2C", "E-commerce", "Retail", "Sports/Fitness"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Beyoncé",
+      "industry": "Entertainment / Celebrity",
+      "orgType": "Celebrity Brand",
+      "size": "Small Team",
+      "geography": "Global",
+      "characteristics": ["Personal Brand", "High Profile", "Multi-platform", "Licensing"],
+      "digitalComplexity": "High",
+      "budgetTier": "Premium"
+    },
+    {
+      "name": "Bicycling Magazine",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Mid-market",
+      "geography": "National",
+      "characteristics": ["Hearst/Rodale", "Enthusiast Media", "Print+Digital", "Health/Fitness"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "BlueCross BlueShield",
+      "industry": "Healthcare / Insurance",
+      "orgType": "Enterprise",
+      "size": "Large (10,000+)",
+      "geography": "National",
+      "characteristics": ["Fortune 500", "Regulated Industry", "B2C", "Member Portals"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Columbia University",
+      "industry": "Higher Education",
+      "orgType": "University",
+      "size": "Large (10,000+)",
+      "geography": "Regional/National",
+      "characteristics": ["Ivy League", "Alumni Magazine", "Multi-school", "Research"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Condé Nast",
+      "industry": "Media / Publishing",
+      "orgType": "Enterprise Publisher",
+      "size": "Large (5,000+)",
+      "geography": "Global",
+      "characteristics": ["Multi-title", "Luxury/Lifestyle", "Digital Transformation", "Advertising"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Dartmouth",
+      "industry": "Higher Education",
+      "orgType": "University",
+      "size": "Large",
+      "geography": "Regional/National",
+      "characteristics": ["Ivy League", "Alumni Magazine", "Liberal Arts", "Research"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Enel",
+      "industry": "Energy / Utilities",
+      "orgType": "Enterprise",
+      "size": "Large (10,000+)",
+      "geography": "Global",
+      "characteristics": ["Multinational", "Renewable Energy", "B2B+B2C", "Regulated"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Humana",
+      "industry": "Healthcare / Insurance",
+      "orgType": "Enterprise",
+      "size": "Large (10,000+)",
+      "geography": "National",
+      "characteristics": ["Fortune 100", "Medicare", "B2C", "Wellness Programs"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Lexia Learning",
+      "industry": "EdTech",
+      "orgType": "SaaS / Education",
+      "size": "Mid-market (500-2000)",
+      "geography": "National",
+      "characteristics": ["K-12", "Literacy", "SaaS", "B2B (Schools)"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Market Basket",
+      "industry": "Retail / Grocery",
+      "orgType": "Regional Retailer",
+      "size": "Large (25,000+)",
+      "geography": "Regional (New England)",
+      "characteristics": ["Family-owned", "Supermarket", "Loyalty", "Regional Brand"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Men's Health",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Mid-market",
+      "geography": "National/Global",
+      "characteristics": ["Hearst", "Health/Fitness", "Print+Digital", "Licensing"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "NPR",
+      "industry": "Media / Broadcasting",
+      "orgType": "Nonprofit Media",
+      "size": "Large (1,000+)",
+      "geography": "National",
+      "characteristics": ["Public Media", "Podcast", "Membership", "News"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Optum",
+      "industry": "Healthcare / Services",
+      "orgType": "Enterprise",
+      "size": "Large (100,000+)",
+      "geography": "National/Global",
+      "characteristics": ["UnitedHealth Group", "Health Services", "Data/Analytics", "B2B"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Penn State",
+      "industry": "Higher Education",
+      "orgType": "University",
+      "size": "Large (50,000+)",
+      "geography": "National",
+      "characteristics": ["Public University", "Alumni Magazine", "Athletics", "Multi-campus"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Prevention",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Mid-market",
+      "geography": "National",
+      "characteristics": ["Hearst", "Health/Wellness", "Print+Digital", "Women 40+"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Princeton University",
+      "industry": "Higher Education",
+      "orgType": "University",
+      "size": "Large",
+      "geography": "National/Global",
+      "characteristics": ["Ivy League", "Alumni Magazine", "Research", "Endowment"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "SELF",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Mid-market",
+      "geography": "National",
+      "characteristics": ["Condé Nast", "Women's Health/Fitness", "Digital-first"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Special Olympics Massachusetts",
+      "industry": "Nonprofit / Sports",
+      "orgType": "Nonprofit",
+      "size": "Small (50-200)",
+      "geography": "Regional (Massachusetts)",
+      "characteristics": ["State Chapter", "Events", "Fundraising", "Volunteers"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "United Healthcare",
+      "industry": "Healthcare / Insurance",
+      "orgType": "Enterprise",
+      "size": "Large (100,000+)",
+      "geography": "National",
+      "characteristics": ["Fortune 10", "Health Insurance", "Medicare/Medicaid", "Digital Health"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Vicinity Energy",
+      "industry": "Energy / Utilities",
+      "orgType": "Mid-market",
+      "size": "Mid-market (200-500)",
+      "geography": "Regional (Northeast)",
+      "characteristics": ["District Energy", "Sustainability", "B2B", "Infrastructure"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Women's Health",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Mid-market",
+      "geography": "National/Global",
+      "characteristics": ["Hearst", "Health/Fitness", "Print+Digital", "Women 25-45"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Bally Ribbon Mills",
+      "industry": "Manufacturing / Textiles",
+      "orgType": "B2B Manufacturing",
+      "size": "Small (100-500)",
+      "geography": "National/Global",
+      "characteristics": ["Specialty Manufacturing", "Aerospace/Defense", "Technical Textiles"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Citizens Energy",
+      "industry": "Energy / Nonprofit",
+      "orgType": "Nonprofit",
+      "size": "Small (50-200)",
+      "geography": "Regional/National",
+      "characteristics": ["Social Enterprise", "Heating Assistance", "Energy Access"],
+      "digitalComplexity": "Low",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "Clearasil",
+      "industry": "Consumer Products / Skincare",
+      "orgType": "Brand (CPG)",
+      "size": "Mid-market",
+      "geography": "Global",
+      "characteristics": ["Reckitt Benckiser", "Teen Market", "E-commerce", "Retail"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Coty",
+      "industry": "Consumer Products / Beauty",
+      "orgType": "Enterprise",
+      "size": "Large (10,000+)",
+      "geography": "Global",
+      "characteristics": ["Fortune 500", "Multi-brand", "Luxury+Mass", "Retail"],
+      "digitalComplexity": "High",
+      "budgetTier": "Enterprise"
+    },
+    {
+      "name": "Eat This, Not That!",
+      "industry": "Media / Digital Publishing",
+      "orgType": "Digital Publisher",
+      "size": "Small (20-50)",
+      "geography": "National",
+      "characteristics": ["Health/Nutrition", "Listicles", "SEO-driven", "Licensing"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Esco Optics",
+      "industry": "Manufacturing / Optics",
+      "orgType": "B2B Manufacturing",
+      "size": "Small (50-100)",
+      "geography": "National/Global",
+      "characteristics": ["Precision Manufacturing", "Defense/Aerospace", "Scientific"],
+      "digitalComplexity": "Low",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Faith Hill & Tim McGraw",
+      "industry": "Entertainment / Celebrity",
+      "orgType": "Celebrity Brand",
+      "size": "Small Team",
+      "geography": "National/Global",
+      "characteristics": ["Country Music", "Personal Brand", "Touring", "Licensing"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Premium"
+    },
+    {
+      "name": "Foxcroft Academy",
+      "industry": "Education / K-12",
+      "orgType": "Private School",
+      "size": "Small (100-300)",
+      "geography": "Regional (Maine)",
+      "characteristics": ["Boarding School", "Prep School", "Enrollment Marketing"],
+      "digitalComplexity": "Low",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Gray Decision Intelligence",
+      "industry": "EdTech / Analytics",
+      "orgType": "SaaS / B2B",
+      "size": "Small (50-200)",
+      "geography": "National",
+      "characteristics": ["Higher Ed Analytics", "Market Intelligence", "SaaS"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "HealthInsurance.com",
+      "industry": "Healthcare / InsurTech",
+      "orgType": "Digital Marketplace",
+      "size": "Mid-market (100-500)",
+      "geography": "National",
+      "characteristics": ["Lead Gen", "Insurance Marketplace", "SEO/PPC Heavy"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "HHAF (Hip Hop Architecture Foundation)",
+      "industry": "Nonprofit / Arts Education",
+      "orgType": "Nonprofit",
+      "size": "Small (<50)",
+      "geography": "National",
+      "characteristics": ["STEAM Education", "Youth Programs", "Architecture", "Cultural"],
+      "digitalComplexity": "Low",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "Imaginatik",
+      "industry": "Software / Innovation",
+      "orgType": "SaaS / B2B",
+      "size": "Small (50-100)",
+      "geography": "Global",
+      "characteristics": ["Innovation Management", "Enterprise Software", "Consulting"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Judge Baker Children's Center",
+      "industry": "Healthcare / Nonprofit",
+      "orgType": "Nonprofit",
+      "size": "Mid-market (200-500)",
+      "geography": "Regional (Massachusetts)",
+      "characteristics": ["Children's Mental Health", "Research", "Clinical Services"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "Lightfully Health",
+      "industry": "Healthcare / Behavioral Health",
+      "orgType": "Healthcare Provider",
+      "size": "Mid-market (200-500)",
+      "geography": "Regional/National",
+      "characteristics": ["Mental Health", "Treatment Centers", "Private Equity"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Linkwell Health",
+      "industry": "Healthcare / Marketing",
+      "orgType": "Health Marketing",
+      "size": "Mid-market (100-300)",
+      "geography": "National",
+      "characteristics": ["Patient Engagement", "Health Plans", "Content Marketing"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Mass Biotech Council",
+      "industry": "Trade Association / Biotech",
+      "orgType": "Trade Association",
+      "size": "Small (20-50)",
+      "geography": "Regional (Massachusetts)",
+      "characteristics": ["Industry Advocacy", "Membership", "Events", "Life Sciences"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Middlesex Community College",
+      "industry": "Higher Education",
+      "orgType": "Community College",
+      "size": "Mid-market (500-1000)",
+      "geography": "Regional (Massachusetts)",
+      "characteristics": ["Public", "Workforce Development", "Enrollment Marketing"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Next Avenue",
+      "industry": "Media / Digital Publishing",
+      "orgType": "Nonprofit Media",
+      "size": "Small (20-50)",
+      "geography": "National",
+      "characteristics": ["PBS", "50+ Audience", "Aging/Retirement", "Public Media"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "Northeast Animal Shelter",
+      "industry": "Nonprofit / Animal Welfare",
+      "orgType": "Nonprofit",
+      "size": "Small (50-100)",
+      "geography": "Regional (Massachusetts)",
+      "characteristics": ["Animal Rescue", "Donations", "Adoption", "Events"],
+      "digitalComplexity": "Low",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "Oldways",
+      "industry": "Nonprofit / Nutrition",
+      "orgType": "Nonprofit",
+      "size": "Small (<20)",
+      "geography": "National",
+      "characteristics": ["Mediterranean Diet", "Nutrition Education", "Cultural Foods"],
+      "digitalComplexity": "Low",
+      "budgetTier": "Nonprofit"
+    },
+    {
+      "name": "Organic Gardening",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Small",
+      "geography": "National",
+      "characteristics": ["Rodale", "Enthusiast", "Sustainability", "Print+Digital"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "PopHealth",
+      "industry": "Healthcare / Digital Health",
+      "orgType": "Health Tech",
+      "size": "Small (20-50)",
+      "geography": "National",
+      "characteristics": ["Population Health", "Analytics", "Health Plans"],
+      "digitalComplexity": "High",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Rodale Publishing",
+      "industry": "Media / Publishing",
+      "orgType": "Publisher",
+      "size": "Mid-market",
+      "geography": "National",
+      "characteristics": ["Health/Wellness", "Multi-title", "Books+Magazines"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "RollWorks",
+      "industry": "MarTech / ABM",
+      "orgType": "SaaS / B2B",
+      "size": "Mid-market (200-500)",
+      "geography": "National/Global",
+      "characteristics": ["Account-Based Marketing", "Advertising", "NextRoll"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Runner's World",
+      "industry": "Media / Publishing",
+      "orgType": "Publication",
+      "size": "Mid-market",
+      "geography": "National/Global",
+      "characteristics": ["Hearst", "Running/Fitness", "Events", "E-commerce"],
+      "digitalComplexity": "High",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Safewaze",
+      "industry": "Manufacturing / Safety",
+      "orgType": "B2B Manufacturing",
+      "size": "Small (100-300)",
+      "geography": "National",
+      "characteristics": ["Fall Protection", "Industrial Safety", "Distribution"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Sasaki",
+      "industry": "Architecture / Design",
+      "orgType": "Professional Services",
+      "size": "Mid-market (300-500)",
+      "geography": "Global",
+      "characteristics": ["Urban Design", "Landscape Architecture", "Planning"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Mid-market"
+    },
+    {
+      "name": "Slendertone",
+      "industry": "Consumer Products / Fitness",
+      "orgType": "Brand (DTC)",
+      "size": "Small",
+      "geography": "Global",
+      "characteristics": ["EMS Technology", "D2C", "Fitness", "E-commerce"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "Sonima",
+      "industry": "Media / Wellness",
+      "orgType": "Digital Publisher",
+      "size": "Small (<50)",
+      "geography": "National",
+      "characteristics": ["Yoga/Meditation", "Video Content", "Wellness"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "SquareWorks",
+      "industry": "Software / Finance",
+      "orgType": "SaaS / B2B",
+      "size": "Small (20-50)",
+      "geography": "National/Global",
+      "characteristics": ["NetSuite Partner", "ERP", "Automation"],
+      "digitalComplexity": "High",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "TeachersConnect",
+      "industry": "EdTech",
+      "orgType": "SaaS / Education",
+      "size": "Small (20-50)",
+      "geography": "National",
+      "characteristics": ["Teacher Community", "Professional Development", "B2B"],
+      "digitalComplexity": "High",
+      "budgetTier": "Small"
+    },
+    {
+      "name": "WorkBar",
+      "industry": "Real Estate / Coworking",
+      "orgType": "Coworking Space",
+      "size": "Small (50-100)",
+      "geography": "Regional (Boston)",
+      "characteristics": ["Flexible Workspace", "Membership", "Events"],
+      "digitalComplexity": "Medium",
+      "budgetTier": "Small"
+    }
+  ]
+}
