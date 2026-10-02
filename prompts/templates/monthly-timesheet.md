@@ -22,8 +22,7 @@ When triggered, generate a timesheet summary for the previous month:
 - Skip weekends (Saturday/Sunday) from flagging
 - Group entries by project/client
 - Calculate total hours for the month
-- Count working days in the month (exclude weekends)
-- Calculate expected hours (working days × 7)
+- **Expected hours: 104** (based on 12-month rolling average as of Oct 2026)
 
 ### 3. Use Cached Data for Lookups
 - Project names: `~/ai-context/cache/basecamp/projects.json`
@@ -37,9 +36,8 @@ When triggered, generate a timesheet summary for the previous month:
 
 ### Summary
 - Total hours logged: [X] hours
-- Working days: [X]
-- Expected hours: [X] (working days × 7)
-- Difference: [+/-X] hours
+- Expected: 104 hours (12-month avg)
+- Difference: [+/-X] hours vs average
 
 ### Hours by Project
 | Project | Hours | % of Total |
