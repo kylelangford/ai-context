@@ -1,0 +1,25 @@
+{
+  "hours": 16079,
+  "projects": 197,
+  "clients": 48,
+  "years": 14,
+  "features": 1484,
+  "launches": 21,
+  "migrations": 19,
+  "platforms": {
+    "drupal": 8200,
+    "wordpress": 2100,
+    "aem": 1400,
+    "react": 900
+  },
+  "industries": {
+    "healthcare": 6108,
+    "education": 2219,
+    "energy": 1807,
+    "publishing": 1533,
+    "saas": 992,
+    "sports": 880,
+    "telecom": 698,
+    "manufacturing": 597
+  }
+}
