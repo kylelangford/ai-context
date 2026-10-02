@@ -3,18 +3,20 @@
 <head>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 700px; margin: 0 auto; padding: 20px; }
-    h1 { color: #2c3e50; font-size: 24px; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+    h1 { color: #2c3e50; font-size: 24px; border-bottom: 2px solid #27ae60; padding-bottom: 10px; }
     h2 { color: #34495e; font-size: 18px; margin-top: 25px; }
     .priority { background: #e8f4f8; padding: 12px; margin: 8px 0; border-radius: 4px; }
     .priority-1 { border-left: 4px solid #e74c3c; }
     .priority-2 { border-left: 4px solid #f39c12; }
-    .priority-3 { border-left: 4px solid #3498db; }
+    .priority-3 { border-left: 4px solid #27ae60; }
     table { width: 100%; border-collapse: collapse; margin: 15px 0; }
     th { background: #f8f9fa; text-align: left; padding: 10px; border-bottom: 2px solid #dee2e6; }
     td { padding: 8px 10px; border-bottom: 1px solid #eee; }
     .hours { font-weight: bold; color: #27ae60; }
     .overdue { color: #e74c3c; }
     .carried { background: #fff3cd; padding: 8px; margin: 5px 0; border-radius: 4px; }
+    .carried:before { content: "○ "; color: #f39c12; }
+    .notes { background: #e8f4f8; padding: 12px; border-radius: 4px; margin: 10px 0; }
     .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
   </style>
 </head>
@@ -35,7 +37,7 @@
   {{TIME_TABLE}}
 
   <h2>Time Budget</h2>
-  <p>Expected this week: {{EXPECTED_HOURS}} hours</p>
+  <p>Expected this week: <span class="hours">{{EXPECTED_HOURS}} hours</span></p>
 
   <h2>Last Week's Git Activity</h2>
   {{GIT_TABLE}}
